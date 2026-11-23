@@ -1,0 +1,18 @@
+# ---------------------------------------------------------------------------
+# config/contrasts.tsv
+#
+# DESeq2 comparisons consumed by 03_RNAseq/03_deseq2.R
+#   contrast     name used for output files
+#   numerator    condition tested for enrichment
+#   denominator  reference condition
+#
+# All six pairwise comparisons between the four conditions.
+# Delete rows you do not want to run.
+# ---------------------------------------------------------------------------
+contrast	numerator	denominator
+day7_vs_day1	day7	day1
+day56_vs_day1	day56	day1
+cdca5oe_vs_day1	cdca5oe	day1
+day56_vs_day7	day56	day7
+cdca5oe_vs_day7	cdca5oe	day7
+cdca5oe_vs_day56	cdca5oe	day56

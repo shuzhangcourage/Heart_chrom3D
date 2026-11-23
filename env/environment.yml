@@ -1,0 +1,60 @@
+# ---------------------------------------------------------------------------
+# env/environment.yml
+#
+#   conda env create -f env/environment.yml
+#   conda activate heart_chrom3d
+#
+# A few tools are not on conda and must be installed separately, see
+# env/versions.md: optimalTAD, Juicer Tools, mustache.
+#
+# Versions here are the ones recorded in the manuscript methods. Where the
+# exact version was not written down it is left unpinned and flagged in
+# env/versions.md.
+# ---------------------------------------------------------------------------
+name: heart_chrom3d
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - python=3.10
+  - pip
+
+  # --- Hi-C -----------------------------------------------------------------
+  - bwa=0.7.19
+  - pairtools=1.1.3
+  - cooler=0.10.2
+  - cooltools=0.7.1
+  - bioframe
+  - pairix
+  - htslib
+  - samtools
+  - bedtools
+  - ucsc-bedgraphtobigwig
+  - ucsc-bigwigtobedgraph
+
+  # --- peak calling / coverage ---------------------------------------------
+  - macs2
+  - deeptools
+
+  # --- CUT&Tag / ATAC / RNA-seq alignment ----------------------------------
+  - trim-galore
+  - bowtie2
+  - picard
+  - subread            # featureCounts
+  - star
+
+  # --- plotting / analysis -------------------------------------------------
+  - numpy
+  - pandas
+  - scipy
+  - matplotlib
+  - seaborn
+  - r-base=4.3
+  - bioconductor-deseq2
+  - bioconductor-apeglm
+  - r-ggplot2
+  - r-pheatmap
+
+  - pip:
+      - coolpup            # coolpup.py / plotpup.py

@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the manuscript below."
+title: "Chromatin 3D organisation during postnatal mouse heart development and in Cdca5-overexpressing cardiomyocytes"
+abstract: "Analysis code for Hi-C 3.0, CUT&Tag, ATAC-seq and RNA-seq data spanning postnatal day 1, day 7, day 56 and a Cdca5 overexpression condition (clone C227) in mouse cardiomyocytes."
+authors:
+  - family-names: "Zhang"
+    given-names: "Shu"
+    affiliation: "Guangzhou Medical University"
+version: "0.1.0"
+date-released: "2026-11-23"
+license: MIT
+repository-code: "https://github.com/shuzhangcourage/Heart_chrom3D"
+keywords:
+  - Hi-C
+  - chromatin conformation
+  - TAD boundary
+  - compartment
+  - CUT&Tag
+  - Cdca5
+  - cardiomyocyte

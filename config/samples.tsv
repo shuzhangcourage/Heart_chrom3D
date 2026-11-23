@@ -1,0 +1,59 @@
+# ---------------------------------------------------------------------------
+# config/samples.tsv
+#
+# One row per sequenced library. This is the ONLY place where sample names,
+# conditions and mark aliases are defined; no script hard-codes a sample.
+#
+# columns
+#   cond      day1 | day7 | day56 | cdca5oe          <- the four conditions
+#   rep       biological replicate, or "merged" when libraries were merged
+#   datatype  hic | cuttag | atac | chipseq | rnaseq
+#   label     library name exactly as it appears in the raw data
+#   mark      unified mark name (CTCF, RAD21, k27ac, k9me3, k4me1, k4me3,
+#             k27me3, ATAC, Cdca5) - use "-" for Hi-C
+#   source    this_study | public
+#   input     path relative to $DATA_DIR
+#
+# Add a sample by adding one line. Nothing else needs to change.
+# ---------------------------------------------------------------------------
+cond	rep	datatype	label	mark	source	input
+day1	1	hic	N1_rep1	-	this_study	hic/N1_rep1_matrix_1kb.mcool
+day1	2	hic	N1_rep2	-	this_study	hic/N1_rep2_matrix_1kb.mcool
+day7	1	hic	N7_rep1	-	this_study	hic/N7_rep1_matrix_1kb.mcool
+day7	2	hic	N7_rep2	-	this_study	hic/N7_rep2_matrix_1kb.mcool
+day56	1	hic	N56_rep1	-	this_study	hic/N56_rep1_matrix_1kb.mcool
+day56	2	hic	N56_rep2	-	this_study	hic/N56_rep2_matrix_1kb.mcool
+cdca5oe	1	hic	cdca5_rep1	-	this_study	hic/cdca5_rep1_matrix_1kb.mcool
+cdca5oe	2	hic	cdca5_rep2	-	this_study	hic/cdca5_rep2_matrix_1kb.mcool
+day1	merged	cuttag	P1_CTCF	CTCF	this_study	bam/P1_CTCF_merge.bam
+day1	merged	cuttag	P1_H3K27	k27ac	this_study	bam/P1_H3K27_merge.bam
+day1	merged	cuttag	P1_H3K9	k9me3	this_study	bam/P1_H3K9_merge.bam
+day1	merged	cuttag	P1_RAD21	RAD21	this_study	bam/P1_RAD21_merge.bam
+day7	merged	cuttag	P7_CTCF	CTCF	this_study	bam/P7_CTCF_merge.bam
+day56	merged	cuttag	P56_CTCF	CTCF	this_study	bam/P56_CTCF_merge.bam
+day56	merged	cuttag	P56_H3K27	k27ac	this_study	bam/P56_H3K27_merge.bam
+day56	merged	cuttag	P56_H3K9	k9me3	this_study	bam/P56_H3K9_merge.bam
+day56	merged	cuttag	P56_RAD21	RAD21	this_study	bam/P56_RAD21_merge.bam
+cdca5oe	merged	cuttag	C227_CTCF	CTCF	this_study	bam/C227_CTCF_merge.bam
+cdca5oe	merged	cuttag	C227_H3K27	k27ac	this_study	bam/C227_H3K27_merge.bam
+cdca5oe	merged	cuttag	C227_H3K9	k9me3	this_study	bam/C227_H3K9_merge.bam
+cdca5oe	merged	cuttag	C227_Rad21	RAD21	this_study	bam/C227_Rad21_merge.bam
+day1	merged	cuttag	P1_merged	Cdca5	this_study	bam/P1_merged.bam
+day7	merged	cuttag	P7_merged	Cdca5	this_study	bam/P7_merged.bam
+day56	merged	cuttag	P56_merged	Cdca5	this_study	bam/P56_merged.bam
+cdca5oe	merged	cuttag	C223_merged	Cdca5	this_study	bam/C223_merged.bam
+day1	merged	atac	ATAC_P1	ATAC	this_study	bam/ATAC_P1_merge.bam
+day7	merged	atac	ATAC_P7	ATAC	this_study	bam/ATAC_P7_merge.bam
+day56	merged	atac	ATAC_P56	ATAC	this_study	bam/ATAC_P56_merge.bam
+cdca5oe	merged	atac	ATAC_Cdca5	ATAC	this_study	bam/ATAC_Cdca5_merge.bam
+day1	merged	chipseq	day1-k27me3	k27me3	public	public/day1-k27me3.bw
+day1	merged	chipseq	day1-k4me1	k4me1	public	public/day1-k4me1.bw
+day1	merged	chipseq	day1-k4me3	k4me3	public	public/day1-k4me3.bw
+day1	merged	chipseq	day1-k9me3	k9me3	public	public/day1-k9me3.bw
+day7	merged	chipseq	day7-k27me3	k27me3	public	public/day7-k27me3.bw
+day7	merged	chipseq	day7-k4me1	k4me1	public	public/day7-k4me1.bw
+day7	merged	chipseq	day7-k4me3	k4me3	public	public/day7-k4me3.bw
+day56	merged	chipseq	day56-k27me3	k27me3	public	public/day56-k27me3.bw
+day56	merged	chipseq	day56-k4me1	k4me1	public	public/day56-k4me1.bw
+day56	merged	chipseq	day56-k4me3	k4me3	public	public/day56-k4me3.bw
+day56	merged	chipseq	day56-k9me3	k9me3	public	public/day56-k9me3.bw
