@@ -1,6 +1,6 @@
 # 01_HiC
 
-Hi-C 3.0 analysis: alignment, matrices, QC, interaction decay, compartments,
+Hi-C analysis: alignment, matrices, QC, interaction decay, compartments,
 TADs, boundary classification and loops.
 
 Every step reads samples from `config/samples.tsv` through `config/select.sh`;
@@ -10,12 +10,12 @@ no condition or filename is hard-coded.
 
 | # | Step | Tool | Output |
 |---|---|---|---|
-| 01 | trim, align, parse pairs | bwa, pairtools | `*.pairs` |
+| 01 | align, parse pairs | bwa, pairtools | `*.pairs` |
 | 02 | build matrices, ICE balance, zoomify | cooler | `*_matrix_1kb.mcool` |
 | 03 | library statistics | pairtools stats, cooler | Table 1 |
 | 04 | intra-chromosomal interaction decay | cooltools | decay curve |
 | 05 | inter-chromosome contact heatmap | cooltools | trans heatmap |
-| 06 | compartment eigenvectors (50 kb) | cooler, cooltools | E1 tracks |
+| 06 | compartment eigenvectors (100 kb) | cooler, cooltools | E1 tracks |
 | 07 | saddle plot and compartment strength (100 kb) | cooltools | saddle plot |
 | 08 | compartment switching, day1 vs day56 | bioframe | switch positions |
 | 09 | TAD calling (10 kb) | optimalTAD | domains |
@@ -44,7 +44,7 @@ matrices exist.
 |---|---|
 | interaction decay, inter-chromosome heatmap | 5 kb |
 | TAD calling, boundary matrix, pile-ups | 10 kb |
-| compartments (eigs-cis) | 50 kb |
+| compartments (eigs-cis) | 100 kb |
 | saddle plot | 100 kb |
 
 ## Parameters worth knowing
