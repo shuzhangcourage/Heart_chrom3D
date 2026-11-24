@@ -19,7 +19,7 @@ to the spike-in genome separately.
 | 06 | coverage track, CPM normalised | both | bigWig |
 | 07 | peak calling with a q-value cutoff | both | narrowPeak |
 | 08 | spike-in scaling factors | CUT&Tag | normalisation table |
-| 09 | Cdca5 correlation with chromatin marks | both + public ChIP-seq | heatmap |
+| 09 | correlation with chromatin marks | both + public ChIP-seq | heatmap |
 
 ## Run order
 
@@ -44,12 +44,6 @@ bamCoverage --binSize 10 --normalizeUsing CPM
 Peaks: MACS2 with a q-value cutoff, `$MACS2_QVALUE` (default 0.05),
 `-f BAMPE -g mm`.
 
-## Note on step 09
-
-`09` is the only step that reads more than one data type: it bins Cdca5 CUT&Tag
-together with CTCF, RAD21, H3K27ac, H3K9me3, H3K27me3, H3K4me1, H3K4me3 and ATAC
-into 100 kb bins and computes Spearman correlation per condition. The public
-histone tracks come from `config/samples.tsv` with `source = public`.
 
 Mark names are normalised in `config/samples.tsv`: raw `H3K27` becomes `k27ac`
 and raw `H3K9` becomes `k9me3`. See [`docs/naming_map.md`](../docs/naming_map.md).
