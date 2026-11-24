@@ -10,9 +10,9 @@ Four conditions are compared throughout:
 | `day1` | postnatal day 1 | `N1`, `P1` |
 | `day7` | postnatal day 7 | `N7`, `P7` |
 | `day56` | postnatal day 56 | `N56`, `P56` |
-| `cdca5oe` | Cdca5 overexpression, clone C227 | `cdca5`, `C227` |
+| `cdca5oe` | Cdca5 overexpression | `cdca5`, `C227` |
 
-Data types: **Hi-C 3.0** (8 libraries, 2 biological replicates per condition),
+Data types: **Hi-C** (8 libraries, 2 biological replicates per condition),
 **CUT&Tag**, **ATAC-seq** and **RNA-seq**.
 
 Genome: `mm10`. CUT&Tag and ATAC-seq libraries were spiked in with *E. coli* and
@@ -26,7 +26,7 @@ aligned against both genomes.
 |---|---|
 | `config/` | `init.sh`, `config.example.sh`, `select.sh`, `samples.tsv`, `contrasts.tsv` |
 | `env/` | Conda environment and software versions |
-| `01_HiC/` | Hi-C 3.0: alignment, matrices, QC, decay, compartments, TADs, boundary classification, loops |
+| `01_HiC/` | Hi-C: alignment, matrices, QC, decay, compartments, TADs, boundary classification, loops |
 | `02_CUTandTag_ATAC/` | CUT&Tag and ATAC-seq, one shared alignment pipeline distinguished by the `datatype` column |
 | `03_RNAseq/` | STAR → featureCounts → DESeq2 |
 | `docs/` | Workflow, figure-to-code map, naming map, references |
